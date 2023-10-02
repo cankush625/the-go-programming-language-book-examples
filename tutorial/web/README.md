@@ -7,4 +7,8 @@
 
 # Exercise 1.8
 Add https:// to the URL if it is not present.  
-`$ go run exercise_1.8.go example.co`
+`$ go run exercise_1.8.go example.com`
+
+# Exercise 1.9
+Print status code of URL
+`$ go run exercise_1.9.go https://example.com`
