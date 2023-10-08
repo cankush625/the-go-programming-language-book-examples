@@ -22,3 +22,6 @@ go.work
 
 # Jetbrains IDEs
 .idea/
+
+# Golang
+.DS_Store
