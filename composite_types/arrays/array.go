@@ -28,4 +28,10 @@ func main() {
 	// array length is determined by number of initializers
 	var d = [...]int{1, 2, 3, 4}
 	fmt.Println(len(d)) // "4"
+
+	// Note: When array is passed to function, the function
+	// receives a copy of an array. So, if we modify the array in
+	// function then the copy will be modified instead of original
+	// array. To modify the original array, we need to pass that
+	// array as a reference (pointer)
 }
