@@ -37,4 +37,12 @@ func main() {
 	// If we need to test whenther a slice is empty, then user len(s),
 	// and not s == nil. Because, there might a non-nil slice of length
 	// and capacity zero, such as []int{} or make([]int, 3)
+
+	// Note on slice comparison:
+	// Comparing two slices is not simple, efficient and obvious.
+	// So, the safest choice is to disallow slice comparisons altogether
+	// The only legal slice comparison is against nil
+	if summer == nil {
+		/* ... */
+	}
 }
