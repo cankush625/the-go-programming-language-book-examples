@@ -34,7 +34,7 @@ func main() {
 	// function will indeed modify the underlying array elements. And
 	// hence original slice will also be modified.
 
-	// If we need to test whenther a slice is empty, then user len(s),
+	// If we need to test whether a slice is empty, then use len(s),
 	// and not s == nil. Because, there might a non-nil slice of length
 	// and capacity zero, such as []int{} or make([]int, 3)
 
