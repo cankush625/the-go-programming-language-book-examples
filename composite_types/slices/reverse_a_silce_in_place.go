@@ -10,7 +10,7 @@ func reverse(s []int) {
 
 func main() {
 	numbers := []int{2, 5, 3, 7, 8}
-	fmt.Println(numbers)
+	fmt.Println(numbers) // "[2 5 3 7 8]"
 	reverse(numbers)
-	fmt.Println(numbers)
+	fmt.Println(numbers) // "[8 7 3 5 2]"
 }
