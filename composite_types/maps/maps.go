@@ -34,4 +34,18 @@ func main() {
 	// map element is not a variable. Because growing map can
 	// cause rehashing of existing elements to a new storage
 	// location, thus potentially invalidating the address.
+
+	// Check if key exist in map or not
+	age, ok := users["rachel"] // age: 32, ok: true
+	if !ok {
+		fmt.Printf("Key does not exist. Age is %d\n", age)
+	} else {
+		fmt.Printf("Age is %d\n", age)
+	}
+
+	if age, ok = users["micheal"]; !ok {
+		fmt.Printf("Key does not exist. Age is %d\n", age) // age: 0, ok: false
+	} else {
+		fmt.Printf("Age is %d\n", age)
+	}
 }
