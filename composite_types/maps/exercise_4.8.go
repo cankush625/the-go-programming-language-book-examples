@@ -77,6 +77,9 @@ func main() {
 	}
 }
 
+// Note:
+// Optimized implementation: https://github.com/torbiak/gopl/blob/master/ex4.8/charcount.go
+
 // Input:
 // Hi, I'm Ankush Chavan. 1145
 // Output:
