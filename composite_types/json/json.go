@@ -82,4 +82,8 @@ func main() {
 		log.Fatalf("JSON unmarshalling failed: %s", err)
 	}
 	fmt.Println(carsLite) // "[{Mercedes 2011} {Audi 2015} {BMW 2017}]"
+
+	// Note:
+	// We can use streaming encoder and decoder like json.Encoder and
+	// json.Decoder to marshal and unmarshall JSON
 }
