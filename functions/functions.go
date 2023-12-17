@@ -25,6 +25,10 @@ func zero(int, int) int {
 	return 0
 }
 
+func returnMultipleValues(num1, num2 int) (result int, ok bool) {
+	return num1 + num2, true
+}
+
 // Note:
 // The type of function is sometimes called its signature.
 // Two functions have the same type or signature if they have
@@ -43,4 +47,13 @@ func main() {
 	fmt.Printf("%T\n", subtract) // "func(int, int) int"
 	fmt.Printf("%T\n", first)    // "func(int, int) int"
 	fmt.Printf("%T\n", zero)     // "func(int, int) int"
+
+	// The result of calling a multi-valued function is a tuple
+	// of values.
+	res, ok := returnMultipleValues(10, 20) // 30 true
+	fmt.Printf("%d %t\n", res, ok)
+	// To ignore one of the result values, assign it to the blank
+	// identifier
+	res, _ = returnMultipleValues(10, 20) // 30
+	fmt.Println(res)
 }
