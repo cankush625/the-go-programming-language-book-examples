@@ -15,6 +15,10 @@ func (b *Ball) GetDiameter() int {
 
 // All the methods of embedded field will be available to
 // the created type
+// This ColoredBall has Ball embedded but ColoredBall is
+// not a Ball. They don't share `is a` relationship.
+// But ColoredBall has a Ball and it will have the methods
+// promoted from Ball
 type ColoredBall struct {
 	Ball
 	Color color.RGBA
