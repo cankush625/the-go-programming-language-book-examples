@@ -21,7 +21,30 @@ func sqlQuote(x interface{}) string {
 	}
 }
 
+// re-write sqlQuote function using switch-case
+// This way of using interface is called discriminated unions
+func sqlQuoteUsingTypeSwitch(x interface{}) string {
+	switch x := x.(type) {
+	case nil:
+		return "NULL"
+	case int, uint:
+		return fmt.Sprintf("%d", x) // x has type interface{} here
+	case bool:
+		if x {
+			return "TRUE"
+		}
+		return "FALSE"
+	case string:
+		return x
+	default:
+		panic(fmt.Sprintf("unexpected type %T: %v", x, x))
+	}
+}
+
 func main() {
 	fmt.Println(sqlQuote(10))   // "10"
 	fmt.Println(sqlQuote(true)) // "TRUE"
+
+	fmt.Println(sqlQuoteUsingTypeSwitch(10))   // "10"
+	fmt.Println(sqlQuoteUsingTypeSwitch(true)) // "TRUE"
 }
