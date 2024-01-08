@@ -22,6 +22,10 @@ func fib(x int) int {
 }
 
 func main() {
+	// Creates a separate goroutine that runs independently.
+	// The go statement itself completes immediately and
+	// causes the function followed by it to run in the
+	// newly created goroutine.
 	go spinner(100 * time.Millisecond)
 	const n = 45
 	fibN := fib(n) // Slow
