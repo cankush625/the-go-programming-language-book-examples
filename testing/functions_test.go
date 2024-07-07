@@ -35,3 +35,22 @@ func TestInvalidDivision(t *testing.T) {
 		}
 	}
 }
+
+// TestGetDivisionCoverage tests the GetDivision function for
+// all possible valid inputs and also generates the coverage report
+// Test function name should have Coverage suffix in order to
+// generate the coverage report
+func TestGetDivisionCoverage(t *testing.T) {
+	var tests = []struct {
+		input [2]int32
+		want  int32
+	}{
+		{[2]int32{1, 1}, 1},
+		{[2]int32{2, 1}, 2},
+	}
+	for _, test := range tests {
+		if got, _ := GetDivision(test.input[0], test.input[1]); got != test.want {
+			t.Errorf("GetDivision(%v, %v) = %v", test.input[0], test.input[1], got)
+		}
+	}
+}
