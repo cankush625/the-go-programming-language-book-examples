@@ -54,3 +54,11 @@ func TestGetDivisionCoverage(t *testing.T) {
 		}
 	}
 }
+
+// BenchmarkGetDivision benchmarks the GetDivision function
+// against huge number of executions
+func BenchmarkGetDivision(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		GetDivision(45, 5)
+	}
+}
