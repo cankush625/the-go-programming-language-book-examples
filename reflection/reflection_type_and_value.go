@@ -11,7 +11,7 @@ func Any(value interface{}) string {
 	return formatAtom(reflect.ValueOf(value))
 }
 
-// funcAtom formats a value without inspecting its
+// formatAtom formats a value without inspecting its
 // internal structure
 func formatAtom(v reflect.Value) string {
 	switch v.Kind() {
