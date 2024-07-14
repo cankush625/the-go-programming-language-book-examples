@@ -1,6 +1,9 @@
 package testing
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 // TestGetDivision tests the GetDivision function for
 // all possible valid inputs
@@ -61,4 +64,14 @@ func BenchmarkGetDivision(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		GetDivision(45, 5)
 	}
+}
+
+// ExampleGetDivision is an example function. It serves as a
+// documentation function.
+func ExampleGetDivision() {
+	fmt.Println(GetDivision(4, 2))
+	fmt.Println(GetDivision(45, 9))
+	// Output:
+	// 2
+	// 5
 }
